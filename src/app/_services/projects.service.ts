@@ -9,7 +9,7 @@ export class ProjectsService {
 
   project: Project[] = [
     //placeholder data replace with my own projects later on.
-      {id: 0, name: 'Practice Flutter App', description: 'Test Description', summary: 'This is a test project to showcase my skills in Flutter development.', projectLink: '', pictures: ["/assets/1.png", "/assets/2.png", "/assets/3.png"], tags: [Tag.ANGULAR, Tag.TYPE_SCRIPT]},
+      {id: 0, name: 'Learning Flutter 1', description: 'Test Description', summary: 'This is a test project to showcase my skills in Flutter development.', projectLink: '', pictures: ["/assets/1.png", "/assets/2.png", "/assets/3.png"], tags: [Tag.ANGULAR, Tag.TYPE_SCRIPT]},
       {id: 1, name: 'Practice Flutter App', description: 'Test Description', summary: 'This is a test project to showcase my skills in Flutter development.', projectLink: '', pictures: ["/assets/1.png", "/assets/2.png", "/assets/3.png"], tags: [Tag.ANGULAR, Tag.TYPE_SCRIPT]},
       {id: 2, name: 'Practice Flutter App', description: 'Test Description', summary: 'This is a test project to showcase my skills in Flutter development.', projectLink: '', pictures: ["/assets/1.png", "/assets/2.png", "/assets/3.png"], tags: [Tag.ANGULAR, Tag.TYPE_SCRIPT]},
       {id: 3, name: 'Practice Flutter App', description: 'Test Description', summary: 'This is a test project to showcase my skills in Flutter development.', projectLink: '', pictures: ["/assets/1.png", "/assets/2.png", "/assets/3.png"], tags: [Tag.ANGULAR, Tag.TYPE_SCRIPT]},

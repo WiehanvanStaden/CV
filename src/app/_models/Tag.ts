@@ -8,7 +8,7 @@ export class Tag {
     static readonly HTML = new Tag('HTML', 'orange');
     static readonly CSS = new Tag('CSS', 'blue');
     static readonly JAVA = new Tag('Java', 'brown');
-    static readonly CSharp = new Tag('C#', 'purple');   
+    static readonly CSHARP = new Tag('C#', 'purple');   
 
     
     private constructor(private readonly key: string, public readonly color: string) {
