@@ -1,0 +1,7 @@
+.skill-section h3 { font-size: 1.15rem; font-weight: 600; }
+.card .progress { border-radius: 10px; overflow: hidden; }
+.progress-bar { transition: width 800ms ease; display:flex; align-items:center; justify-content:center; font-size:0.9rem; }
+
+@media (max-width: 576px) {
+  .skill-section { margin-bottom: 1rem; }
+}

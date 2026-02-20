@@ -1,0 +1,94 @@
+<div class="resume-container container">
+  <div class="resume-top d-flex justify-content-between align-items-start">
+    <h2 class="mb-0">Resume</h2>
+    <div>
+      <button (click)="DownloadResume()" class="btn btn-outline-dark mb-2 shadow-sm">Download PDF</button>
+    </div>
+  </div>
+
+  <div class="resume-grid mt-4" *ngIf="isBrowser">
+    <!-- Left column: split into profile, contact and skills cards -->
+    <div class="resume-left-column">
+      <aside class="card profile-card">
+        <div class="card-body">
+          <h3 class="name">Wiehan van Staden</h3>
+          <p class="role">Junior Software Developer</p>
+          <p class="summary">Reliable developer with experience building responsive web apps using Angular and TypeScript. Focused on clean architecture, accessibility and shipping production-ready features.</p>
+        </div>
+      </aside>
+
+      <aside class="card contact-card">
+        <div class="card-body">
+          <section class="contact">
+            <h5>Contact</h5>
+            <ul class="contact-list">
+              <li>Email: <a href="mailto:you&#64;example.com">you&#64;example.com</a></li>
+              <li>Location: Cape Town, ZA</li>
+              <li>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></li>
+            </ul>
+          </section>
+        </div>
+      </aside>
+
+      <aside class="card skills-card">
+        <div class="card-body">
+          <section class="skills">
+            <h5>Skills</h5>
+            <div *ngFor="let group of skillCategories" class="skill-group">
+              <div class="skill-group-title">{{group.category}}</div>
+              <div class="skill-chips">
+                <span *ngFor="let item of group.items" class="chip">{{item}}</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Right column: work experience (education moved to its own card) -->
+    <main class="resume-right card">
+      <div class="card-body">
+        <section class="experience">
+          <h4>Work Experience</h4>
+          <div class="timeline">
+            <article *ngFor="let e of experiences" class="timeline-item">
+              <div class="timeline-meta">
+                <h5 class="title mb-0">{{e.title}}</h5>
+                <div class="meta-sub text-muted">{{e.company}} • <span class="date">{{e.period}}</span></div>
+              </div>
+              <ul class="mt-2">
+                <li *ngFor="let b of e.bullets">{{b}}</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Right column wrapper: Education card + Certifications card (stacked) -->
+    <div class="resume-right-column">
+      <aside class="card resume-education">
+        <div class="card-body">
+          <section class="education">
+            <h4>Education</h4>
+            <div *ngFor="let ed of education" class="education-item mb-3">
+              <h5 class="mb-0">{{ed.degree}}</h5>
+              <div class="text-muted">{{ed.institution}} • <span class="date">{{ed.period}}</span></div>
+              <p class="mb-0 small">{{ed.notes}}</p>
+            </div>
+          </section>
+        </div>
+      </aside>
+
+      <aside class="card resume-certifications">
+        <div class="card-body">
+          <h4>Certifications</h4>
+          <ul>
+            <li *ngFor="let c of certifications">{{c.title}} — <small class="text-muted">{{c.issuer}} ({{c.date}})</small></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    max-width: 1140px;
+}
+
+.tag {
+    padding: 0 20px;
+    height: 30px ;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 30px;
+    border-radius: 25px;
+    color: white;
+}
+
+/* Profile picture circle with border and hover/focus effects */
+.profile-pic {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255,255,255,0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+    display: block;
+    margin: 0 auto;
+    transition: transform 260ms cubic-bezier(.22,.9,.3,1), box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.profile-pic:hover,
+.profile-pic:focus {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.22);
+    border-color: rgba(255,255,255,1);
+    outline: none;
+}
+
+@media (max-width: 576px) {
+    .profile-pic {
+        width: 160px;
+        height: 160px;
+        border-width: 4px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-pic {
+        transition: none;
+        transform: none;
+    }
+}

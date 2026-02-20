@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+
+        <!-- About Me Section -->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2 class="text-center">About Me</h2>
+                
+                <div class="text-center">  
+                    <img src="/assets/Mugshot.png" alt="profile image" width="256" height="256" class="rounded-full mx-auto d-block profile-pic" tabindex="0">
+                </div>
+
+                <p>
+                    This will hold a brief introduction about myself. and some information about my background, skills, and interests.
+                </p>
+            </div>
+        </div>
+
+        <!--Featured Project Section -->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>Featured Projects</h2>
+                <h4>{{ featuredProjects[0].name}}</h4>
+            </div>
+
+            <carousel *ngIf="isBrowser">
+                <slide *ngFor="let picture of featuredProjects[0].pictures">
+                    <img [src]="picture" alt="slide" style="display:block; width: 100%;">
+                </slide>
+            </carousel>
+            <p class="mt-2">{{ featuredProjects[0].summary}}</p>
+            <p class="mt-2"> Visit my Portfolio tab to learn more of my journey.</p>
+        </div>
+    </div>
+</div>

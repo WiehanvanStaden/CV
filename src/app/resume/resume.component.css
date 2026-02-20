@@ -1,0 +1,66 @@
+/* Card-based resume redesign — dark / monochrome accent */
+.resume-container { max-width: 1100px; margin: 0 auto; color: #222; }
+.resume-top h2 { color: #111; }
+.btn-outline-dark { border-color: #333; color: #111; }
+
+.resume-grid { display: grid; grid-template-columns: 320px 1fr 320px; gap: 1.25rem; align-items:start; }
+.card { background: #ffffff; border: 1px solid #e6e6e6; border-radius: 8px; box-shadow: 0 6px 18px rgba(15,15,15,0.06); }
+.card-body { padding: 1.25rem; }
+
+/* Right column wrapper (stacks education + certifications) */
+.resume-right-column { display: flex; flex-direction: column; gap: 1rem; }
+.resume-certifications .card-body { padding-top: 0.75rem; }
+
+@media (max-width: 900px) {
+  .resume-grid { grid-template-columns: 1fr; }
+  .resume-left-column { order: 2; }
+  .resume-right { order: 1; }
+  .resume-right-column { order: 3; }
+}
+
+/* Left column (split cards) */
+.resume-left-column { display: flex; flex-direction: column; gap: 1rem; }
+.profile-card .name { margin: 0; font-size: 1.25rem; font-weight: 700; }
+.profile-card .role { color: #555; margin-bottom: 0.5rem; }
+.profile-card .summary { color: #333; font-size: 0.95rem; line-height: 1.4; }
+.contact-list { list-style: none; padding: 0; margin: 0; color: #444; }
+.contact-list li { margin: 0.35rem 0; }
+.skills-card .skill-list { margin: 0; padding: 0; }
+
+/* Skills (categorized chips) */
+.skill-group { margin-bottom: 0.75rem; }
+.skill-group-title { font-weight: 600; color: #333; margin-bottom: 0.5rem; font-size: 0.92rem; }
+.skill-chips { display:flex; flex-wrap:wrap; gap:0.5rem; }
+.chip { background: #f5f5f5; color: #222; padding: 0.35rem 0.6rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #eee; }
+.chip:hover { background: #eee; }
+@media (prefers-reduced-motion: reduce) { .chip { transition: none; } }
+
+/* Right column */
+.experience .timeline { border-left: 2px solid #efefef; padding-left: 1rem; }
+.timeline-item { position: relative; margin-bottom: 1.25rem; padding-left: 1rem; }
+.timeline-item::before { content: ""; position: absolute; left: -10px; top: 6px; width: 10px; height: 10px; background: #333; border-radius: 50%; }
+.timeline-item .title { font-size: 1rem; color: #111; }
+.timeline-item .meta-sub { font-size: 0.9rem; }
+
+.education-item .date, .timeline-item .date { color: #666; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .resume-grid { grid-template-columns: 1fr; }
+  .resume-left { order: 2; }
+  .resume-right { order: 1; }
+}
+
+/* Print-friendly */
+@media print {
+  body, .resume-container { background: #fff; color: #000; }
+  .card { box-shadow: none; border: none; }
+  .skill-fill { background: #000 !important; }
+  .btn-outline-dark { display: none; }
+  .resume-grid { grid-template-columns: 1fr; }
+}
+
+/* Accessibility / reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skill-fill { transition: none; }
+}

@@ -1,0 +1,57 @@
+<div class="container py-4">
+  <h2 class="mb-4 text-center">Skills</h2>
+
+  <div class="row">
+    <div class="col-12 mb-4 skill-section" *ngIf="languages.length">
+      <h3 class="mb-3 text-center">Languages</h3>
+      <div class="row gy-3">
+        <div class="col-12 col-sm-6" *ngFor="let lang of languages">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                  <h5 class="card-title mb-0">{{ lang.name }}</h5>
+                  <small class="text-muted">{{ lang.level }}</small>
+                </div>
+              </div>
+
+              <div class="progress mt-auto" style="height: 18px;">
+                <div class="progress-bar" role="progressbar"
+                     [attr.aria-valuenow]="lang.percent" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{ 'width': lang.percent + '%', 'background-color': lang.color || '' , 'color': lang.textColor || '#fff' }">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 mb-4 skill-section" *ngIf="frameworks.length">
+      <h3 class="mb-3 text-center">Frameworks &amp; Tools</h3>
+      <div class="row gy-3">
+        <div class="col-12 col-sm-6" *ngFor="let fw of frameworks">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <div>
+                  <h5 class="card-title mb-0">{{ fw.name }}</h5>
+                  <small class="text-muted">{{ fw.level }}</small>
+                </div>
+              </div>
+
+              <div class="progress mt-auto" style="height: 18px;">
+                <div class="progress-bar" role="progressbar"
+                     [attr.aria-valuenow]="fw.percent" aria-valuemin="0" aria-valuemax="100"
+                     [ngStyle]="{ 'width': fw.percent + '%', 'background-color': fw.color || '' , 'color': fw.textColor || '#fff' }">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
