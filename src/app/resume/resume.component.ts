@@ -56,7 +56,7 @@ export class ResumeComponent {
   ];
 
   certifications = [
-    { title: 'The Complete Flutter Guide: Build Android, iOS, Web & Desktop Apps', issuer: 'Udemy', date: 'Jan 2026' }
+    { title: 'The Complete Flutter Guide: Build Android, iOS, Web & Desktop Apps', issuer: 'Udemy', date: ' Jan 2026 ' }
   ];
   
   constructor(private titleService: Title, private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object) {
