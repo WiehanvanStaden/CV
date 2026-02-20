@@ -1,0 +1,10 @@
+.modal-header .btn-close {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.modal-header .btn-close:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}

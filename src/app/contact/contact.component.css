@@ -1,0 +1,25 @@
+.contact-page {
+  background-color: #f8f9fa;
+}
+
+.info {
+  background-color: #ffffff;
+}
+
+.info .social-links img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.info .social-links a:hover img {
+  transform: scale(1.1);
+}
+
+form {
+  background-color: #ffffff;
+}
+
+.btn-primary {
+  min-width: 140px;
+}

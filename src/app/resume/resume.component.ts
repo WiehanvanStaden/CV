@@ -15,7 +15,7 @@ export class ResumeComponent {
   // Data-driven resume sections
   skillCategories = [
     { category: 'Languages', items: ['TypeScript', 'JavaScript', 'Python', 'Java'] },
-    { category: 'Frameworks', items: ['Angular', 'Node.js', 'Express'] },
+    { category: 'Frameworks', items: ['Angular', 'Node.js'] },
     { category: 'Frontend', items: ['HTML', 'CSS', 'Sass', 'Bootstrap'] },
     { category: 'Tools', items: ['Git', 'Jest', 'ESLint'] }
   ];
@@ -56,7 +56,12 @@ export class ResumeComponent {
   ];
 
   certifications = [
-    { title: 'The Complete Flutter Guide: Build Android, iOS, Web & Desktop Apps', issuer: 'Udemy', date: ' Jan 2026 ' }
+    { title: 'The Complete Flutter Guide: Build Android, iOS, Web & Desktop Apps', issuer: 'Udemy', date: ' Jan 2026 ' },
+    { title: 'IT Essentials, Routing and Switching', issuer: 'Cisco Networking Academy', date: ' Nov 2020 ' },
+    { title: 'Introduction to Networking', issuer: 'Cisco Networking Academy', date: ' Nov 2021' },
+    { title: 'Introduction to Artificial Intelligence (AI)', issuer: 'Coursera', date: ' Nov 2023' },
+    { title: 'Introduction to Probability and Data with R', issuer: 'Coursera', date: ' Nov 2023' },
+    { title: 'Big Data Emerging Technologies', issuer: 'Coursera', date: ' Nov 2023' },
   ];
   
   constructor(private titleService: Title, private renderer: Renderer2, @Inject(PLATFORM_ID) private platformId: Object) {
@@ -67,7 +72,7 @@ export class ResumeComponent {
   DownloadResume() {
     const link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
-    link.setAttribute('href', 'assets/Wiehan_van_Staden_Resume.pdf'); // ensure file exists
+    link.setAttribute('href', 'assets/CV/Wiehan_CV.pdf'); // ensure file exists
     link.setAttribute('download', 'Wiehan_van_Staden_Resume.pdf');
     link.click();
     link.remove();
